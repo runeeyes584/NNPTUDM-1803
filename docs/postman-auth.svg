@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f4efe6"/>
+  <rect x="40" y="40" width="1120" height="640" rx="24" fill="#fffaf2" stroke="#1f2937" stroke-width="4"/>
+  <text x="80" y="100" font-family="Courier New, monospace" font-size="34" font-weight="700" fill="#111827">Postman Auth Flow</text>
+  <text x="80" y="145" font-family="Courier New, monospace" font-size="20" fill="#374151">Base URL: http://localhost:3000/api/v1/auth</text>
+
+  <rect x="80" y="190" width="1040" height="120" rx="18" fill="#fee2e2" stroke="#991b1b" stroke-width="3"/>
+  <text x="110" y="235" font-family="Courier New, monospace" font-size="26" font-weight="700" fill="#7f1d1d">1. POST /login</text>
+  <text x="110" y="275" font-family="Courier New, monospace" font-size="20" fill="#7f1d1d">Body JSON: { "username": "...", "password": "..." }</text>
+  <text x="110" y="305" font-family="Courier New, monospace" font-size="20" fill="#7f1d1d">Response: accessToken, tokenType, expiresIn</text>
+
+  <rect x="80" y="340" width="1040" height="120" rx="18" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+  <text x="110" y="385" font-family="Courier New, monospace" font-size="26" font-weight="700" fill="#1e3a8a">2. GET /me</text>
+  <text x="110" y="425" font-family="Courier New, monospace" font-size="20" fill="#1e3a8a">Header: Authorization: Bearer &lt;accessToken&gt;</text>
+  <text x="110" y="455" font-family="Courier New, monospace" font-size="20" fill="#1e3a8a">Response: user info without password</text>
+
+  <rect x="80" y="490" width="1040" height="140" rx="18" fill="#dcfce7" stroke="#166534" stroke-width="3"/>
+  <text x="110" y="535" font-family="Courier New, monospace" font-size="26" font-weight="700" fill="#14532d">3. POST /change-password</text>
+  <text x="110" y="575" font-family="Courier New, monospace" font-size="20" fill="#14532d">Header: Authorization: Bearer &lt;accessToken&gt;</text>
+  <text x="110" y="605" font-family="Courier New, monospace" font-size="20" fill="#14532d">Body JSON: { "oldPassword": "...", "newPassword": "Strong@123" }</text>
+</svg>
